@@ -1,7 +1,7 @@
 # Generated Snips skill
 
 This is a generated Python 3 snips app, using the `snips-template` tool.
-It is compatible with the format expected by the `snips-skill-server`
+The skill is very specific and not usable for people not living in our village.
 
 ## Setup
 
