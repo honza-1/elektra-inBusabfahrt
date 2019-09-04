@@ -1,5 +1,0 @@
-# Bindings for the hermes protocol 
-hermes-python>=0.2
-# other dependencies 
-requests>=2
-htmldom>=2
