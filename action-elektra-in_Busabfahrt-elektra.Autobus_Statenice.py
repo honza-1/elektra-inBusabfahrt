@@ -43,15 +43,15 @@ def action_wrapper(hermes, intentMessage, conf):
         date_obj=datetime.strptime(dtti.split(' ')[0], "%Y-%m-%d").date()
         time_obj=dtti.split(' ')[1].split(':')[0]+":"+dtti.split(' ')[1].split(':')[1]
         PARAMS['time']=time_obj
-        PARAMS['date')=date_obj.strftime("%d.%m.%Y")
+        PARAMS['date']=date_obj.strftime("%d.%m.%Y")
         if date_obj==today:
-              result_sentence="Heute nach "+time_obj+" Uhr fährt der Bus um"
+              result_sentence="Heute nach "+time_obj+" Uhr fährt der Bus um "
         elif date_obj==tomorrow:
-              result_sentence="Morgen nach "+time_obj+" Uhr"
+              result_sentence="Morgen nach "+time_obj+" Uhr fährt der Bus um "
         else:
-              result_sentence="Am"+date_obj.strftime("%d.%m.%Y")+" nach "+time_obj+" Uhr fährt der Bus um"
+              result_sentence="Am "+date_obj.strftime("%d.%m.%Y")+" nach "+time_obj+" Uhr fährt der Bus um "
     else:
-        result_sentence="Der Bus fährt um"
+        result_sentence="Der Bus fährt um "
     r = requests.get(url=URL,params=PARAMS)
     dom=htmldom.HtmlDom().createDom(r.text)
     a=dom.find("li[class=item]")
